@@ -17,6 +17,7 @@ package com.bitgrind.websocket;
 
 import java.io.IOException;
 import java.io.PushbackInputStream;
+import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
 
 /**
@@ -101,7 +102,12 @@ class HttpResponseParser {
 
   private void handleCRLF(byte[] buffer, int offset, boolean foundCR) {
     int lineLength = offset - (foundCR ? 2 : 1);
-    String line = new String(buffer, 0, lineLength, UTF8);
+    String line;
+    try {
+      line = new String(buffer, 0, lineLength, UTF8.name());
+    } catch (UnsupportedEncodingException e) {
+      throw new AssertionError(e);
+    }
     handleLine(line);
   }
 
