@@ -35,10 +35,9 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.Random;
 
-import com.google.common.io.ByteStreams;
-import com.google.common.io.Closeables;
-import com.google.common.primitives.Bytes;
-
+import com.bitgrind.websocket.util.ByteStreams;
+import com.bitgrind.websocket.util.Bytes;
+import com.bitgrind.websocket.util.Closeables;
 
 public class WebSocketClient {
 

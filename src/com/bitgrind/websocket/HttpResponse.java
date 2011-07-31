@@ -16,10 +16,9 @@
 
 package com.bitgrind.websocket;
 
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
-
-import com.google.common.collect.Maps;
 
 public class HttpResponse {
   private String version;
@@ -44,7 +43,7 @@ public class HttpResponse {
     if (scanner.hasNext())
       statusMessage = scanner.nextLine().trim();
 
-    headers = Maps.newLinkedHashMap();
+    headers = new LinkedHashMap<String, String>();
   }
 
   public String getVersion() {
