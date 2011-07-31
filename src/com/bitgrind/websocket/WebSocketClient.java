@@ -271,33 +271,4 @@ public class WebSocketClient {
     }
     return s.toString();
   }
-
-  public static void main(String[] args) throws IOException, URISyntaxException {
-    new WebSocketClient("ws://websocket.mtgox.com/mtgox", new WebSocketListener() {
-      @Override
-      public void onOpen() {
-        System.err.println("OPEN");
-      }
-
-      @Override
-      public void onMessage(byte[] message) {
-        System.out.println(Arrays.toString(message));
-      }
-
-      @Override
-      public void onMessage(String message) {
-        System.out.println(message);
-      }
-
-      @Override
-      public void onError(Throwable e) {
-        System.err.println("ERROR");
-      }
-
-      @Override
-      public void onClose() {
-        System.err.println("CLOSE");
-      }
-    });
-  }
 }
