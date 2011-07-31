@@ -6,11 +6,6 @@ Chrome and current spoken by *most servers (or at least the ones I plan to use i
 
 [1] http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-00
 
-The only dependency right now is Guava, but it's only used for a couple small things. 
-I plan to replace those so this has no required third party libraries.
-
-I hacked this toegether in about a day, so it current doesn't have a lot of testing and
-presently lacks a way to send to the server, but that's coming shortly (or you can add
-it!).
+This library has 0 dependent jars (not counting junit, used only for unit tests).
 
 -Mark
